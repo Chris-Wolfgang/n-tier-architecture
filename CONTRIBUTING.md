@@ -1,6 +1,6 @@
-# Contributing to {{PROJECT_NAME}}
+# Contributing to Wolfgang.NTier
 
-Thank you for your interest in contributing to **{{PROJECT_NAME}}**! We welcome contributions to help improve this project.
+Thank you for your interest in contributing to **Wolfgang.NTier**! We welcome contributions to help improve this project.
 
 ## How Can You Contribute?
 

@@ -1,6 +1,6 @@
-# Verifying a release of {{PACKAGE_NAME}}
+# Verifying a release of Wolfgang.NTier
 
-Anyone can check that a published release of {{PACKAGE_NAME}} was built from the tagged source, without
+Anyone can check that a published release of Wolfgang.NTier was built from the tagged source, without
 trusting this repository's CI. This page is for a consumer who has never seen the repository.
 
 ## What "reproducible" means here
@@ -15,7 +15,7 @@ What is expected to differ, and is never compared:
 - **the package file itself** (`.nupkg` / `.snupkg` as a zip): NuGet stamps every zip entry with the pack time, so
   two packs of the same commit never give the same zip bytes, even on one machine. Compare the entries.
 - **a build on another operating system**: cross-OS identity is reported by the
-  [Reproducible Build workflow]({{GITHUB_REPO_URL}}/actions/workflows/reproducible-build.yaml), not promised.
+  [Reproducible Build workflow](https://github.com/Chris-Wolfgang/n-tier-architecture/actions/workflows/reproducible-build.yaml), not promised.
 
 Every pull request is checked the same way: the workflow packs the commit twice on Ubuntu and fails unless both
 packs are identical by the rules above.
@@ -39,9 +39,9 @@ You need git, the GitHub CLI (`gh`), Python 3 and a Linux machine (or container)
 
    ```bash
    TAG=v1.2.3   # the release you are checking
-   git clone --branch "$TAG" --depth 1 {{GITHUB_REPO_URL}}.git
-   cd {{REPO_NAME}}
-   gh release download "$TAG" --repo {{GITHUB_OWNER}}/{{REPO_NAME}} --dir ../release
+   git clone --branch "$TAG" --depth 1 https://github.com/Chris-Wolfgang/n-tier-architecture.git
+   cd n-tier-architecture
+   gh release download "$TAG" --repo Chris-Wolfgang/n-tier-architecture --dir ../release
    cat ../release/BUILD-MANIFEST.txt
    ```
 
@@ -90,7 +90,7 @@ You need git, the GitHub CLI (`gh`), Python 3 and a Linux machine (or container)
 5. **Check the provenance** of the downloaded assets against this repository:
 
    ```bash
-   for f in ../release/*; do gh attestation verify "$f" --repo {{GITHUB_OWNER}}/{{REPO_NAME}}; done
+   for f in ../release/*; do gh attestation verify "$f" --repo Chris-Wolfgang/n-tier-architecture; done
    ```
 
 ## Releases cut before the standard

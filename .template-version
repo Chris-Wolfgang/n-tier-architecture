@@ -1,0 +1,22 @@
+{
+  "template": "Chris-Wolfgang/repo-template",
+  "commit": "b03c631a8df1d4303b5f68247e1fce7fd48dbbab",
+  "updated": "2026-11-14",
+  "placeholders": {
+    "COPYRIGHT_HOLDER": "Chris Wolfgang",
+    "DOCS_URL": "https://Chris-Wolfgang.github.io/n-tier-architecture/",
+    "GITHUB_OWNER": "Chris-Wolfgang",
+    "GITHUB_REPO_URL": "https://github.com/Chris-Wolfgang/n-tier-architecture",
+    "GITHUB_USERNAME": "@Chris-Wolfgang",
+    "LICENSE_TYPE": "MIT",
+    "NUGET_STATUS": "Not applicable",
+    "PACKAGE_NAME": "Wolfgang.NTier",
+    "PROJECT_DESCRIPTION": "Example of creating a traditional n-tier application with modular components that can be swapped out as needed. Also demonstrates creating multiple user interfaces that can reuse the same modules and backend",
+    "PROJECT_NAME": "Wolfgang.NTier",
+    "REPO_NAME": "n-tier-architecture",
+    "TEMPLATE_REPO_NAME": "repo-template",
+    "TEMPLATE_REPO_OWNER": "Chris-Wolfgang",
+    "YEAR": "2026"
+  },
+  "note": "Written by scripts/setup.ps1 and scripts/upgrade.ps1; the template commit this repository last took template-managed files from, and the placeholder values setup used."
+}
