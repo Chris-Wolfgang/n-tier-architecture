@@ -1,5 +1,5 @@
 # Sequential PR validation workflow with coverage gating
-# Stage 1: Linux tests with 90% coverage requirement
+# Stage 1: Linux tests with 95% coverage requirement
 # Stage 2: Windows .NET (5.0-10.0) and .NET Framework (4.6.2-4.8.1) tests (only if Linux passes)
 # Stage 3: macOS tests (only if Stage 2 passes)
 # Stage 4: Linux ARM64 tests and Stage 5: Windows ARM64 tests (net6.0+, in parallel with
@@ -32,7 +32,7 @@ env:
   # host, and the run then aborts with no test having failed.
   VSTEST_CONNECTION_TIMEOUT: 300
   # Minimum line coverage for PRODUCTION assemblies (anything under src/).
-  CODECOV_MINIMUM: 90
+  CODECOV_MINIMUM: 95
   # Minimum line coverage for TEST assemblies (anything under tests/).
   # Test code that never executes has no purpose — an uncovered helper, fake, or
   # branch in a test project is dead code and should be exercised or deleted.
@@ -874,7 +874,7 @@ jobs:
           echo ""
           
           failed_projects=""
-          threshold=${CODECOV_MINIMUM:-90}
+          threshold=${CODECOV_MINIMUM:-95}
           test_threshold=${CODECOV_TEST_MINIMUM:-100}
           matched_count=0
 
@@ -1408,7 +1408,7 @@ jobs:
           Get-Content "CoverageReport/Summary.txt"
           Write-Host ""
 
-          $threshold     = if ($env:CODECOV_MINIMUM) { [int]$env:CODECOV_MINIMUM } else { 90 }
+          $threshold     = if ($env:CODECOV_MINIMUM) { [int]$env:CODECOV_MINIMUM } else { 95 }
           $testThreshold = if ($env:CODECOV_TEST_MINIMUM) { [int]$env:CODECOV_TEST_MINIMUM } else { 100 }
           $failedProjects = @()
           $matchedCount   = 0
@@ -1903,7 +1903,7 @@ jobs:
           cat CoverageReport/Summary.txt
           echo ""
 
-          THRESHOLD=${CODECOV_MINIMUM:-90}
+          THRESHOLD=${CODECOV_MINIMUM:-95}
           TEST_THRESHOLD=${CODECOV_TEST_MINIMUM:-100}
           FAILED=0
           MATCHED=0
