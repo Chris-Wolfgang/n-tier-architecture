@@ -1,0 +1,97 @@
+# Analyzer rules relaxed for test projects
+
+[*.cs]
+
+# AsyncFixer01: Remove async/await for single-expression methods — test methods need async for Assert.ThrowsAsync
+dotnet_diagnostic.AsyncFixer01.severity = none
+
+# MA0004: Use ConfigureAwait(false) — not needed in test code
+dotnet_diagnostic.MA0004.severity = none
+
+# MA0011: Use IFormatProvider overload of ToString — not needed in test assertions
+dotnet_diagnostic.MA0011.severity = none
+
+# MA0048: File name must match type name — test files contain multiple helper types
+dotnet_diagnostic.MA0048.severity = none
+
+# MA0051: Method is too long — test methods can be longer for readability
+dotnet_diagnostic.MA0051.severity = none
+
+# MA0074: Use StringComparison overload — not critical in tests
+dotnet_diagnostic.MA0074.severity = none
+
+# S108: Empty block of code — sometimes needed in test setup
+dotnet_diagnostic.S108.severity = none
+
+# S1215: Remove use of GC.GetTotalMemory — acceptable in perf/memory tests
+dotnet_diagnostic.S1215.severity = none
+
+# S2699: Add assertion to test case — some tests verify no-throw behavior
+dotnet_diagnostic.S2699.severity = none
+
+# S6562: Provide DateTimeKind — test data doesn't need DateTimeKind
+dotnet_diagnostic.S6562.severity = none
+
+# S6610: Use char overload of StartsWith — not critical in tests
+dotnet_diagnostic.S6610.severity = none
+
+# VSTHRD200: Use Async suffix — test methods follow xunit naming conventions
+dotnet_diagnostic.VSTHRD200.severity = none
+
+# MA0003: Name the parameter — not needed in test assertions and setup
+dotnet_diagnostic.MA0003.severity = none
+
+# S1144: Remove unused private type member — test POCOs have constructors used via reflection
+dotnet_diagnostic.S1144.severity = none
+
+# xUnit2013: Use Assert.Single instead of Assert.Equal for collection size
+dotnet_diagnostic.xUnit2013.severity = none
+
+# IDE1006 / CA1707: Naming — allow Test_Method_Names_With_Underscores
+dotnet_diagnostic.IDE1006.severity = none
+dotnet_diagnostic.CA1707.severity = none
+
+# CA1849: Allow synchronous CancellationTokenSource.Cancel() in tests
+dotnet_diagnostic.CA1849.severity = none
+
+# AsyncFixer02 / AsyncFixer05: Allow synchronous blocking and downcasting in tests
+dotnet_diagnostic.AsyncFixer02.severity = none
+dotnet_diagnostic.AsyncFixer05.severity = none
+
+# IDE0058: Allow unused expression values in tests
+dotnet_diagnostic.IDE0058.severity = none
+
+# VSTHRD102/103/104/107/114: Relax threading analyzer rules for tests
+dotnet_diagnostic.VSTHRD102.severity = none       # Allow synchronous implementation in tests
+dotnet_diagnostic.VSTHRD103.severity = none       # Allow calling sync methods when async alternatives exist in tests
+dotnet_diagnostic.VSTHRD104.severity = none       # Allow missing async options in tests
+dotnet_diagnostic.VSTHRD107.severity = none       # Allow Task in using without await in tests
+dotnet_diagnostic.VSTHRD114.severity = none       # Allow returning null from Task methods in tests
+
+# RS0030: Banned API Analyzer — allow in tests (sync I/O and Stream overrides are common in test setup)
+dotnet_diagnostic.RS0030.severity = none
+
+# MA0026 / MA0040: TODO comments and CancellationToken flow not critical in tests
+dotnet_diagnostic.MA0026.severity = none
+dotnet_diagnostic.MA0040.severity = none
+
+# S1118: Utility class constructors OK in tests
+dotnet_diagnostic.S1118.severity = none
+
+# S1135: TODO tags OK in tests
+dotnet_diagnostic.S1135.severity = none
+
+# S3216: ConfigureAwait not needed in tests
+dotnet_diagnostic.S3216.severity = none
+
+# S3776: Complexity OK in tests
+dotnet_diagnostic.S3776.severity = none
+
+# S4049: Properties vs methods flexibility in tests
+dotnet_diagnostic.S4049.severity = none
+
+# S6966: Async versions not available on all target frameworks
+dotnet_diagnostic.S6966.severity = none
+
+# CA2007: ConfigureAwait not needed in tests
+dotnet_diagnostic.CA2007.severity = none
