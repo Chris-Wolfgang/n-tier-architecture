@@ -19,4 +19,4 @@ When you run `dotnet docfx docfx_project/docfx.json` from the repository root (a
 ## Template Placeholders
 
 The `index.md` file uses the following template placeholder:
-- `{{PROJECT_NAME}}` - Will be replaced with your project name
+- `Wolfgang.NTier` - Will be replaced with your project name
