@@ -35,6 +35,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 - **GitHub Repository:** [https://github.com/Chris-Wolfgang/n-tier-architecture](https://github.com/Chris-Wolfgang/n-tier-architecture)
 - **API Documentation:** https://Chris-Wolfgang.github.io/n-tier-architecture/
+- **Architecture:** [docs/architecture/README.md](docs/architecture/README.md) (the n-tier reference design explained)
 - **Formatting Guide:** [docs/README-FORMATTING.md](docs/README-FORMATTING.md)
 - **Contributing Guide:** [CONTRIBUTING.md](CONTRIBUTING.md)
 
