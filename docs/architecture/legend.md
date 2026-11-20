@@ -2,9 +2,12 @@
 
 [Back to the index](README.md)
 
-This table is the legend for the diagram. It describes the notation the diagram is being moved to;
-the redraw is tracked in [#37](https://github.com/Chris-Wolfgang/n-tier-architecture/issues/37), so
-the current SVG does not match every row yet.
+This table is the legend for the diagram. The diagram carries the same legend as a box on the right
+of the page. Three rows are not on the diagram yet, because the shapes they describe have not been
+drawn: the background-worker box and the plain component box
+([#38](https://github.com/Chris-Wolfgang/n-tier-architecture/issues/38)), and the key icon
+([#35](https://github.com/Chris-Wolfgang/n-tier-architecture/issues/35)). Each one joins the box in
+the PR that draws it.
 
 | Element | Meaning |
 |---|---|
