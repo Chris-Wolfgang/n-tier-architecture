@@ -14,8 +14,9 @@ the current SVG does not match every row yet.
 | Plain component box | A supporting component that is neither a service nor a repository, for example `IAuthenticationClient` (sign-in). |
 | Pale-blue region | Business Logic Layer |
 | Pale-orange region | Data Access Layer |
-| Container with a header | One deliverable: Client Application, Web Service, Web UI or Console ETL. |
-| Small lilac boxes | UI technology options (Windows Desktop: WPF, WinUI 3, Windows Forms, BlazorWebView; Cross Platform: MAUI, Blazor Hybrid) |
+| Container with a header | One deliverable, each with its own fill: Client Application (light grey), Web Service (pale teal), Web UI (pale green), Console ETL (lilac-blue). |
+| Pale-orange panel | Repository catalog: the Relational and Document repository panels beside the diagram. |
+| Lilac group with technology icons | UI technology options for the desktop client (Windows Desktop: WPF, WinUI 3, Windows Forms, BlazorWebView; Cross Platform: MAUI, Blazor Hybrid). The Web UI and Web Service show their options as icons inside the container. |
 | Grey box | Data store |
 | Yellow box | Note. Yellow is used for nothing else. |
 | Dashed line, hollow triangle | Implements (UML realization), pointing at the interface |
